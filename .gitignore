@@ -1,3 +1,10 @@
 rust-actix/target
 
 *.env
+
+
+node_modules
+
+*js
+
+build
