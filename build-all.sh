@@ -3,7 +3,7 @@
 
 ## Rust - Actix
 cd rust-actix
-docker build -t rust-actix .
+#docker build -t rust-actix .
 cd ..
 
 ## TS (node) - Express

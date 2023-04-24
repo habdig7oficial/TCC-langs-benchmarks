@@ -67,7 +67,7 @@ done
 
 ab -n 100000 -c 1020  http://localhost:8080/ > ../benchmaks/$(basename $(pwd))
 #ab -n 50 -c 5  http://localhost:8080/ > ../benchmaks/$(basename $(pwd))
-kill $(lsof -t -i:8080)
+kill $(lsof -t -i:8080)a nonstatic member reference must be relative to a specific objectC/C++(245)
 
 echo feito $(basename $(pwd)) no arquivo ../benchmaks/$(basename $(pwd))
 
