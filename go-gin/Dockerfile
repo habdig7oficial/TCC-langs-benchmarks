@@ -10,4 +10,4 @@ RUN cd ./src
 
 EXPOSE 8080
 
-CMD ["go run ."]
+CMD ["go run trigger.go"]

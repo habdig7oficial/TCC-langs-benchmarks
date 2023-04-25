@@ -12,8 +12,9 @@ docker build -t node-express .
 cd ..
 
 ## TS (deno) - Oak
-
-#docker build -t deno-oak
+cd deno-ts-oak
+docker build -t deno-oak .
+cd ..
 
 ## Go - Gin
 cd go-gin
