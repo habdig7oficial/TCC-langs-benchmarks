@@ -55,7 +55,7 @@ class benchmarks{
 
                     system("until pids=$(lsof -t -i:8080) do sleep 1 done");
                     string mnt = "ab -n " + to_string(conections) + " -c " + to_string(parallelism) + " " + protocol + "://" + host + ":" + to_string(port) + "/ > ./benchmaks/" + i + ".txt";
-                    sleep(10);
+                    sleep(20);
                     cout << mnt << endl << endl << endl;
                     system(mnt.c_str());
                     Kill();
@@ -83,7 +83,7 @@ int main(){
     Script.protocol = "http";
 
 
-    Script.images = {"node-express", "deno-oak", };
+    Script.images = {"node-express", "go-gin" , "deno-oak", };
 
     Script.Run();
 

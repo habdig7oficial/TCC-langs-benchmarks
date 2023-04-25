@@ -6,8 +6,8 @@ COPY . .
 
 RUN go mod tidy 
 
-RUN cd ./src
+#RUN cd ./src
 
 EXPOSE 8080
 
-CMD ["go run trigger.go"]
+CMD ["go","run","./src/trigger.go"]
