@@ -5,6 +5,14 @@
 #include <thread>
 #include <unistd.h>
 
+//sockets
+//#include <sys/types.h>
+//#include <sys/socket.h>
+
+//#include <netinet/in.h>
+//#include <errno.h>
+//#include <arpa/inet.h>
+
 //g++ -pthread benchmark.cpp -o benchmark && ./benchmark
 
 using namespace std;
@@ -55,9 +63,11 @@ class benchmarks{
 
                     system("until pids=$(lsof -t -i:8080) do sleep 1 done");
                     string mnt = "ab -n " + to_string(conections) + " -c " + to_string(parallelism) + " " + protocol + "://" + host + ":" + to_string(port) + "/ > ./benchmaks/" + i + ".txt";
-                    sleep(20);
+                    sleep(40);
+
                     cout << mnt << endl << endl << endl;
-                    system(mnt.c_str());
+                    system(mnt.
+                    c_str());
                     Kill();
                     t1.detach();
                     cout << "benchmark done";
@@ -77,8 +87,8 @@ int main(){
     Script.port = 8080;
     //Script.conections = 100000;
     //Script.paralelism = 1020;
-    Script.conections = 10;
-    Script.parallelism = 5;
+    Script.conections = 100000;
+    Script.parallelism = 100;
     Script.host = "localhost";
     Script.protocol = "http";
 
@@ -86,6 +96,32 @@ int main(){
     Script.images = {"node-express", "go-gin" , "deno-oak", };
 
     Script.Run();
+/*
+                    struct sockaddr_in addr;
 
+                    addr.sin_addr.s_addr = inet_addr(Script.host.c_str());
+                    addr.sin_family = AF_INET;
+                    addr.sin_port = htons(Script.port);
+
+                    int sd = socket(AF_INET, SOCK_STREAM, 0);
+                    if (sd == -1) {
+                        cout << endl << "Error when trying to create socket !" << endl;
+                        exit(-1);
+                    }
+                    else{
+                        cout << endl << "SK create" << endl;
+                    }
+
+                    cout << endl << AF_INET << endl;
+                    cout << endl << SOCK_STREAM << endl;
+
+
+                    if (connect(sd, (struct sockaddr *)&addr, sizeof(addr)) < 0) {
+                        cout << "failed to connect to server" << endl;
+                        exit(1);
+                    }
+
+                    cout << "Connected to the server?!" << endl;
+*/
     return 0;
 }

@@ -2,7 +2,7 @@ This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
-Benchmarking localhost (be patient).....done
+Benchmarking localhost (be patient)
 
 
 Server Software:        
@@ -12,31 +12,31 @@ Server Port:            8080
 Document Path:          /
 Document Length:        12 bytes
 
-Concurrency Level:      5
-Time taken for tests:   0.036 seconds
-Complete requests:      10
+Concurrency Level:      100
+Time taken for tests:   22.533 seconds
+Complete requests:      100000
 Failed requests:        0
-Total transferred:      1520 bytes
-HTML transferred:       120 bytes
-Requests per second:    279.54 [#/sec] (mean)
-Time per request:       17.887 [ms] (mean)
-Time per request:       3.577 [ms] (mean, across all concurrent requests)
-Transfer rate:          41.49 [Kbytes/sec] received
+Total transferred:      15200000 bytes
+HTML transferred:       1200000 bytes
+Requests per second:    4437.95 [#/sec] (mean)
+Time per request:       22.533 [ms] (mean)
+Time per request:       0.225 [ms] (mean, across all concurrent requests)
+Transfer rate:          658.76 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    1   0.9      1       2
-Processing:     1    6   6.5      3      21
-Waiting:        0    5   6.4      3      20
-Total:          2    7   6.0      4      21
+Connect:        0    2   3.0      1      46
+Processing:     1   21  14.0     18     218
+Waiting:        0   20  14.1     17     218
+Total:          5   22  14.1     20     218
 
 Percentage of the requests served within a certain time (ms)
-  50%      4
-  66%      4
-  75%     11
-  80%     11
-  90%     21
-  95%     21
-  98%     21
-  99%     21
- 100%     21 (longest request)
+  50%     20
+  66%     23
+  75%     25
+  80%     27
+  90%     34
+  95%     44
+  98%     63
+  99%     80
+ 100%    218 (longest request)

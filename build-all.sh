@@ -20,3 +20,8 @@ cd ..
 cd go-gin
 docker build -t go-gin .
 cd ..
+
+## C++ - Drogon
+cd c++-drogon
+docker build -t c++-drogon .
+cd ..
