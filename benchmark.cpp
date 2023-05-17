@@ -55,7 +55,7 @@ class benchmarks{
 
                     system("until pids=$(lsof -t -i:8080) do sleep 1 done");
                     string mnt = "ab -n " + to_string(conections) + " -c " + to_string(parallelism) + " " + protocol + "://" + host + ":" + to_string(port) + "/ > ./benchmaks/" + i + ".txt";
-                    sleep(10);
+                    sleep(40);
                     cout << mnt << endl << endl << endl;
                     system(mnt.c_str());
                     Kill();
@@ -77,13 +77,13 @@ int main(){
     Script.port = 8080;
     //Script.conections = 100000;
     //Script.paralelism = 1020;
-    Script.conections = 10;
-    Script.parallelism = 5;
+    Script.conections = 10000;
+    Script.parallelism = 100;
     Script.host = "localhost";
     Script.protocol = "http";
 
 
-    Script.images = {"node-express", "deno-oak", };
+    Script.images = {"node-express", "deno-oak", "go-gin", "cpp-drogon" };
 
     Script.Run();
 
