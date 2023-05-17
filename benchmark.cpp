@@ -33,16 +33,11 @@ class benchmarks{
 
         void Invoke(string str){
             Kill();
-            string teste = ("docker run -it --rm --network host " + str + "").c_str();
+            string teste = ("docker run -it --name " + str + "-running --rm --network host " + str).c_str();
             cout << teste << endl;
             system(teste.c_str());
             return;
         };
-
-        void Bench(string str){
-
-            return;
-        }
 
         void Run(){
             Build();
@@ -77,13 +72,13 @@ int main(){
     Script.port = 8080;
     //Script.conections = 100000;
     //Script.paralelism = 1020;
-    Script.conections = 10000;
-    Script.parallelism = 100;
+    Script.conections = 100000;
+    Script.parallelism = 1020;
     Script.host = "localhost";
     Script.protocol = "http";
 
 
-    Script.images = {"node-express", "deno-oak", "go-gin", "cpp-drogon" };
+    Script.images = {"node-express", "deno-oak", "go-gin", "cpp-drogon",  "elixir-plug" };
 
     Script.Run();
 

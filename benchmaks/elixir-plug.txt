@@ -5,7 +5,7 @@ Licensed to The Apache Software Foundation, http://www.apache.org/
 Benchmarking localhost (be patient)
 
 
-Server Software:        
+Server Software:        Cowboy
 Server Hostname:        localhost
 Server Port:            8080
 
@@ -13,30 +13,30 @@ Document Path:          /
 Document Length:        12 bytes
 
 Concurrency Level:      200
-Time taken for tests:   7.487 seconds
+Time taken for tests:   9.970 seconds
 Complete requests:      100000
 Failed requests:        0
-Total transferred:      12900000 bytes
+Total transferred:      17500000 bytes
 HTML transferred:       1200000 bytes
-Requests per second:    13355.59 [#/sec] (mean)
-Time per request:       14.975 [ms] (mean)
-Time per request:       0.075 [ms] (mean, across all concurrent requests)
-Transfer rate:          1682.49 [Kbytes/sec] received
+Requests per second:    10030.25 [#/sec] (mean)
+Time per request:       19.940 [ms] (mean)
+Time per request:       0.100 [ms] (mean, across all concurrent requests)
+Transfer rate:          1714.15 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    6   1.4      6      22
-Processing:     0    9   3.0      8      55
-Waiting:        0    6   3.0      6      53
-Total:          1   15   3.1     15      70
+Connect:        0    9   1.6      9      20
+Processing:     3   11   3.2     10      64
+Waiting:        2    8   3.3      7      59
+Total:          8   20   2.8     19      70
 
 Percentage of the requests served within a certain time (ms)
-  50%     15
-  66%     15
-  75%     16
-  80%     16
-  90%     17
-  95%     19
-  98%     21
-  99%     25
+  50%     19
+  66%     20
+  75%     20
+  80%     21
+  90%     22
+  95%     23
+  98%     25
+  99%     32
  100%     70 (longest request)

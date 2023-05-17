@@ -20,3 +20,14 @@ cd ..
 cd go-gin
 docker build -t go-gin .
 cd ..
+
+## C++ - Drogon
+cd go-gin
+docker build -t cpp-drogon .
+cd ..
+
+
+## Elixir - Plug
+cd elixir-plug
+docker build -t elixir-plug .
+cd ..
