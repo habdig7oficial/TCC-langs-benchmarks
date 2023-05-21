@@ -44,3 +44,18 @@ elixir_plug-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+
+build
+
+.elixir_ls
+
+
+
+
+
+
+# D lang files
+
+
+*.a

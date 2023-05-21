@@ -31,3 +31,23 @@ cd ..
 cd elixir-plug
 docker build -t elixir-plug .
 cd ..
+
+
+
+
+## Build Vlang
+
+
+mkdir build && cd tmp build
+
+
+git clone https://github.com/vlang/v
+
+cd v
+
+docker build -t vlang .
+
+cd ..
+cd ..
+
+rm -rf build

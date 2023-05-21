@@ -3,3 +3,40 @@ Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
 Benchmarking localhost (be patient)
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /
+Document Length:        12 bytes
+
+Concurrency Level:      1020
+Time taken for tests:   9.353 seconds
+Complete requests:      100000
+Failed requests:        0
+Total transferred:      15200000 bytes
+HTML transferred:       1200000 bytes
+Requests per second:    10692.14 [#/sec] (mean)
+Time per request:       95.397 [ms] (mean)
+Time per request:       0.094 [ms] (mean, across all concurrent requests)
+Transfer rate:          1587.11 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   60 244.2      1    3052
+Processing:     5   31  65.8     25    1726
+Waiting:        5   31  65.7     25    1724
+Total:          8   92 270.6     27    3070
+
+Percentage of the requests served within a certain time (ms)
+  50%     27
+  66%     29
+  75%     30
+  80%     31
+  90%     46
+  95%   1032
+  98%   1057
+  99%   1238
+ 100%   3070 (longest request)
