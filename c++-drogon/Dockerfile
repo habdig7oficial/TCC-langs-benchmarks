@@ -1,15 +1,17 @@
-FROM debian:latest
+FROM debian:latest as ideps
 
 WORKDIR /usr/src/app
 
 COPY . . 
+
+WORKDIR /usr/src/
 
 ##
 
 RUN apt update
 
 RUN apt install git -y
-RUN apt install gcc -y
+#RUN apt install gcc -y
 RUN apt install gcc -y
 RUN apt install g++ -y
 RUN apt install cmake -y
@@ -26,15 +28,17 @@ RUN apt install zlib1g-dev -y
 
 ##
 
-RUN git clone https://github.com/drogonframework/drogon
+FROM ideps as drogon
 
-WORKDIR /usr/src/app/drogon
+RUN git clone https://github.com/drogonframework/drogon drogon
+
+WORKDIR /usr/src/drogon
 
 RUN git submodule update --init
 
 RUN mkdir build
 
-WORKDIR /usr/src/app/drogon/build
+WORKDIR /usr/src/drogon/build
 
 RUN cmake ..
     
@@ -42,6 +46,14 @@ RUN make
 
 RUN make install
 
+FROM drogon as cpp-drogon
+
+WORKDIR /usr/src/app/build
+
+RUN cmake .. 
+
+RUN make
+
 EXPOSE 8080
 
-CMD ["c++-drogon"]
+CMD ["./c++-drogon"]

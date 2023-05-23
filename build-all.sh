@@ -22,7 +22,7 @@ docker build -t go-gin .
 cd ..
 
 ## C++ - Drogon
-cd go-gin
+cd c++-drogon
 docker build -t cpp-drogon .
 cd ..
 

@@ -1,0 +1,15 @@
+{application, erlang_plug,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, [erlang_plug_sup]},
+  {mod, {erlang_plug_app, []}},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[]},
+  {modules, [handler]},
+
+  {licenses, ["Apache-2.0"]},
+  {links, []}
+ ]}.

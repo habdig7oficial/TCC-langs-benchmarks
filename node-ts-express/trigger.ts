@@ -1,5 +1,5 @@
 import express from "express"
-import { Request, Response } from "express"
+import type { Request, Response } from "express"
 
 const App = express()
 const port = 8080

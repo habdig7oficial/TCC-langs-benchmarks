@@ -5,7 +5,7 @@ Licensed to The Apache Software Foundation, http://www.apache.org/
 Benchmarking localhost (be patient)
 
 
-Server Software:        
+Server Software:        drogon/1.8.4
 Server Hostname:        localhost
 Server Port:            8080
 
@@ -13,30 +13,30 @@ Document Path:          /
 Document Length:        12 bytes
 
 Concurrency Level:      1020
-Time taken for tests:   6.141 seconds
+Time taken for tests:   7.647 seconds
 Complete requests:      100000
 Failed requests:        0
-Total transferred:      12900000 bytes
+Total transferred:      16900000 bytes
 HTML transferred:       1200000 bytes
-Requests per second:    16282.91 [#/sec] (mean)
-Time per request:       62.642 [ms] (mean)
-Time per request:       0.061 [ms] (mean, across all concurrent requests)
-Transfer rate:          2051.26 [Kbytes/sec] received
+Requests per second:    13077.84 [#/sec] (mean)
+Time per request:       77.995 [ms] (mean)
+Time per request:       0.076 [ms] (mean, across all concurrent requests)
+Transfer rate:          2158.35 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0   27   4.8     27      41
-Processing:    12   35   9.5     33     243
-Waiting:        0   26   9.9     23     230
-Total:         32   62   8.2     62     261
+Connect:        0   38 102.1     33    3071
+Processing:     1   38  23.8     35     263
+Waiting:        0   28  23.7     25     250
+Total:          5   77 104.2     68    3114
 
 Percentage of the requests served within a certain time (ms)
-  50%     62
-  66%     64
-  75%     65
-  80%     67
-  90%     70
-  95%     72
-  98%     76
-  99%     78
- 100%    261 (longest request)
+  50%     68
+  66%     71
+  75%     73
+  80%     73
+  90%     76
+  95%     82
+  98%    133
+  99%    262
+ 100%   3114 (longest request)

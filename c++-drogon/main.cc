@@ -1,5 +1,7 @@
 #include <drogon/drogon.h>
 
+using namespace std;
+using namespace drogon;
 
 int main() {
     //Set HTTP listener address and port
